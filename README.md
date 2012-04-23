@@ -6,6 +6,8 @@ A procedural texture renderer for XNA Game Studio
 
 GalacTex is a GPU-accelerated texture renderer, inspired by the "Texture Bake" tools in Blender. With it, you can create compact procedural materials using HLSL that are rendered for your models as ordinary 2D textures at run-time.
 
+This project lives at https://github.com/tromero/GalacTex
+
 To use it, you simply create your models in the 3D program of your choice and load it through XNA's Content Pipeline. Your procedural materials are written in HLSL. There are some HLSL functions such as perlin noise included to help with building your effects.
 
 The material descriptions are written in HLSL. Here's an example (taken from the Marble.fx example):

@@ -34,6 +34,8 @@ namespace GtExample
         Model monkey;
         Model monkey1;
 
+        SpriteFont font;
+
         public GtExampleGame()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -63,6 +65,8 @@ namespace GtExample
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            font = Content.Load<SpriteFont>("font");
 
             // Initialize the texture renderer
             Stopwatch s = Stopwatch.StartNew();
@@ -220,6 +224,7 @@ namespace GtExample
             spriteBatch.Begin();
             // Draw the active model's texture to the screen
             spriteBatch.Draw((model.Meshes[0].Effects[0] as BasicEffect).Texture, new Rectangle(0, 0, 512, 512), Color.White);
+            spriteBatch.DrawString(font, "Space: Next sample. Mouse: rotate model.", new Vector2(512 + 10, 512 - 30), Color.White);
             spriteBatch.End();
 
             GraphicsDevice.BlendState = BlendState.Opaque;
@@ -235,7 +240,6 @@ namespace GtExample
             Matrix projection = Matrix.CreatePerspectiveFieldOfView(0.7f, GraphicsDevice.Viewport.AspectRatio, 0.1f, 200f);
 
             model.Draw(world, view, projection);
-
 
             base.Draw(gameTime);
         }

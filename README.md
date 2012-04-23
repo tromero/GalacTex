@@ -68,18 +68,18 @@ Using GalacTex
 In `Game.LoadContent()`:
 ```csharp
 GalacTex.TextureRenderer.LoadContent(GraphicsDevice, Content);
-Model model = Content.Load("modelFile");
-Effect mat = Content.Load("effectFile");
+Model model = Content.Load<Model>("modelFile");
+Effect mat = Content.Load<Effect>("effectFile");
 
 // (optional) Set up any custom effect parameters on your GalacTex Effects
 
-TextureRenderer renderer = new TextureRenderer(model, mat, 1024, 1024);
+GalacTex.TextureRenderer renderer = new TextureRenderer(model, mat, 1024, 1024);
 renderer.RenderTexture();
 
 // copies the texture data from the render target to an ordinary texture. 
 // This is done so the contents of the rendered texture are not lost during certain
 // graphics device events, such as entering fullscreen mode or minimizing the game.
-Texture2D tex = textureRenderer.GetTexture();
+Texture2D tex = renderer.GetTexture();
 
 // Apply the texture to a model by assigning it to the model's Effect
 ```

@@ -10,7 +10,7 @@ To use it, you simply create your models in the 3D program of your choice and lo
 
 The material descriptions are written in HLSL. Here's an example (taken from the Marble.fx example):
 
-```HLSL
+```hlsl
 #include "GalacTexContent/GtVertex.fxh"
 #include "GalacTexContent/GtNoise.fxh"
 
@@ -65,14 +65,24 @@ Models used with GalacTex must have non-overlapping texture coordinates which do
 Using GalacTex
 --------
 
-In `Game.LoadContent()`
-- Call `GalacTex.TextureRenderer.LoadContent()`
-- Load your model and GalacTex Effect using the `ContentManager`.
-- Set up any custom effect parameters on your GalacTex Effects
-- Create a new `TextureRenderer`, passing it the Model, Effect, and texture dimensions.
-- Call `textureRenderer.RenderTexture()` to render the model with the given effect.
-- Call `textureRenderer.GetTexture()` to copy the texture data from the render target to an ordinary texture. This is done so the contents of the rendered texture are not lost during certain graphics device events, such as entering fullscreen mode or minimizing the game.
-- Apply the texture to a model by assigning it to the model's Effect
+In `Game.LoadContent()`:
+```csharp
+GalacTex.TextureRenderer.LoadContent(GraphicsDevice, Content);
+Model model = Content.Load("modelFile");
+Effect mat = Content.Load("effectFile");
+
+// (optional) Set up any custom effect parameters on your GalacTex Effects
+
+TextureRenderer renderer = new TextureRenderer(model, mat, 1024, 1024);
+renderer.RenderTexture();
+
+// copies the texture data from the render target to an ordinary texture. 
+// This is done so the contents of the rendered texture are not lost during certain
+// graphics device events, such as entering fullscreen mode or minimizing the game.
+Texture2D tex = textureRenderer.GetTexture();
+
+// Apply the texture to a model by assigning it to the model's Effect
+```
 
 In `Game.Draw()`
 - Render your model normally

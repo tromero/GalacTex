@@ -89,7 +89,7 @@ namespace GtExample
             // render the teapot with a decal applied
             {
                 Effect mat = Content.Load<Effect>("Decal");
-                Texture2D logo = Content.Load<Texture2D>("GalacTexContent/Template");
+                Texture2D logo = Content.Load<Texture2D>("blender_logo");
                 mat.Parameters["decalTex0"].SetValue(logo);
                 mat.Parameters["decalTransform0"].SetValue(Matrix.CreateLookAt(new Vector3(3, 2.5f, 0), new Vector3(1f, 1.7f, 0), new Vector3(0, 1, 0)) *
                                                           Matrix.CreateOrthographic(1.2f, 1.2f, 1f, 2f));

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GtExample", "GtExample\GtExample\GtExample.csproj", "{9F9B6740-861D-48E0-ABA1-6A07A2FF011C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GtExampleContent", "GtExample\GtExampleContent\GtExampleContent.contentproj", "{016DC29E-1BC8-4E57-9C5E-A3A7F5C48AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalacTex", "..\..\GalacTex\GalacTex\GalacTex.csproj", "{79464C0C-7B94-4C57-AAC2-52B67FF405DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F9B6740-861D-48E0-ABA1-6A07A2FF011C}.Debug|x86.ActiveCfg = Debug|x86
+		{9F9B6740-861D-48E0-ABA1-6A07A2FF011C}.Debug|x86.Build.0 = Debug|x86
+		{9F9B6740-861D-48E0-ABA1-6A07A2FF011C}.Release|x86.ActiveCfg = Release|x86
+		{9F9B6740-861D-48E0-ABA1-6A07A2FF011C}.Release|x86.Build.0 = Release|x86
+		{016DC29E-1BC8-4E57-9C5E-A3A7F5C48AEE}.Debug|x86.ActiveCfg = Debug|x86
+		{016DC29E-1BC8-4E57-9C5E-A3A7F5C48AEE}.Release|x86.ActiveCfg = Release|x86
+		{79464C0C-7B94-4C57-AAC2-52B67FF405DC}.Debug|x86.ActiveCfg = Debug|x86
+		{79464C0C-7B94-4C57-AAC2-52B67FF405DC}.Debug|x86.Build.0 = Debug|x86
+		{79464C0C-7B94-4C57-AAC2-52B67FF405DC}.Release|x86.ActiveCfg = Release|x86
+		{79464C0C-7B94-4C57-AAC2-52B67FF405DC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
